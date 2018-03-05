@@ -1,23 +1,21 @@
-let gulp = require('gulp'),
-	file = require('gulp-file');
+let gulp = require('gulp');
+let clean = require('gulp-clean');
+let connect = require('gulp-connect');
+let mkFile = require('gulp-file');
 
-gulp.task('message1', function(){
-	console.log("Its working");
-});
-gulp.task('message2', function(){
-	console.log("This is a second message");
-});
-gulp.task('changed', function(){
-	console.log("File edited");
-});
-// gulp.task('js', function(){
-// 	var str = primus.library();
+gulp.task('test', function(){
+  console.log("Gulp is working!");
+})
 
-// 	return gulp.src("")
-// });
-
-gulp.task('watch', function(){
-	gulp.watch('./index.html', ['changed']);
+gulp.task("default", function(){
+  console.log("TEMPLATE CREATED ON THE DESKTOP");
+  gulp.src(['Site_Template/**/**'])
+    .pipe(gulp.dest('../'));
 });
 
-gulp.task('default', ['message1','message2']);
+gulp.task('clean', function () {
+	console.log("All HTML files within 'dist' folder deleted");
+    gulp.src('dist/code')
+        .pipe(clean());
+});
+
