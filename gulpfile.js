@@ -1,21 +1,32 @@
-let gulp = require('gulp');
-let clean = require('gulp-clean');
-let connect = require('gulp-connect');
-let mkFile = require('gulp-file');
+let gulp = require('gulp'),
+	sass = require('gulp-sass'),
+	clean = require('gulp-clean'),
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify');
 
-gulp.task('test', function(){
-  console.log("Gulp is working!");
-})
 
-gulp.task("default", function(){
+gulp.task("move", function(){
   console.log("TEMPLATE CREATED ON THE DESKTOP");
-  gulp.src(['Site_Template/**/**'])
-    .pipe(gulp.dest('../'));
+  gulp.src('./Staging/485\ Design/**')
+    .pipe(gulp.dest('./Production/485\ Design\ (Production)'));
 });
 
-gulp.task('clean', function () {
-	console.log("All HTML files within 'dist' folder deleted");
-    gulp.src('dist/code')
-        .pipe(clean());
+gulp.task('sass', function(){
+	gulp.src('./Staging/485\ Design/css/*.scss')
+		.pipe(sass({outputStyle: "compressed"}))
+		.pipe(gulp.dest('./Staging/485\ Design/css'));
 });
 
+gulp.task('scripts', function(){
+	gulp.src('./Staging/485\ Design/js/*.js')
+		.pipe(concat('Full.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('./Staging/485\ Design/js'));
+});
+
+gulp.task('clean', function(){
+	gulp.src(['./Production/485\ Design\ (Production)/**/**/*.scss','./Production/485\ Design\ (Production)/**/**/scripts.js','./Production/485\ Design\ (Production)/**/**/jquery.min.js'])
+		.pipe(clean({force: true}));
+});
+
+gulp.task('default', ['sass','scripts']);
