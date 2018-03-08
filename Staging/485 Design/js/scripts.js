@@ -1,3 +1,6 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
+    console.log( "Work" );
 });
+
+
+console.log("this is not the alphabet");

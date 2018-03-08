@@ -29,4 +29,8 @@ gulp.task('clean', function(){
 		.pipe(clean({force: true}));
 });
 
-gulp.task('default', ['sass','scripts']);
+gulp.task('watch', function(){
+	gulp.watch('./Staging/485\ Design/css/*.scss', ['sass']);
+});
+
+gulp.task('default', ['scripts']);

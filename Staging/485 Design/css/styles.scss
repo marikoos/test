@@ -1,7 +1,9 @@
 $exampleColor:red;
+$exampleBorder: 1px solid black;
 
 .container{
 	padding:500px;
-	border:1px solid black;
-	background:$exampleColor
+	border: 1px solid black;
+	background:$exampleColor;
+	border-radius: 1000px;
 }
