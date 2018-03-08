@@ -1,0 +1,35 @@
+PLEASE MAKE SURE THE DOWNLOADED PACKAGE.JSON HAS REPLACED YOUR ORIGINAL
+
+SET UP
+1)	Install required packages
+		"npm i"
+
+
+FUNCTIONALITY
+
+-- Staging stage -- 
+(Push parent directory "Staging" to github throughout the project)
+
+1) Run /dist/index.html but edit CSS and JS files within src folder
+
+1) Activate listener to convert and minify SCSS to CSS dynamically and compress all JS files to one, this will move converted files to running directory (dist folder).
+		"~/node/bin/gulp watch"
+
+
+-- Production stage --
+(Only use these commands when project is completed)
+
+1) Move project to auto-generated production folder
+		"~/node/bin/gulp move"
+
+
+GIT
+1) git config --global user.name "Enter your name" 		(To see who did what)
+2) git init
+3) git remote add 485design https://github.com/dalehogg/485-Design
+4) git add .
+5) git commit -m "Enter a useful note"
+6) git push 485design master
+
+7) git log 		(see log of commit's)
+8) git diff 	(see difference you've made locally between orginal and edited from 						when you typed "git add .")

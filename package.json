@@ -1,18 +1,25 @@
 {
-  "name": "485DesignSummative",
+  "name": "485design",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalehogg/Gulp-Non-Global.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dalehogg/Gulp-Non-Global/issues"
+  },
+  "homepage": "https://github.com/dalehogg/Gulp-Non-Global#readme",
   "devDependencies": {
     "gulp-clean": "^0.4.0",
-    "gulp-clean-css": "^3.9.2",
     "gulp-concat": "^2.6.1",
-    "gulp-file": "^0.4.0",
+    "gulp-open": "^3.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0"
   }
