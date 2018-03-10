@@ -50,4 +50,4 @@ GIT
 	(see log of commit's)
 	
 9) git diff 	
-	(see difference you've made locally between orginal and edited from 						when you typed "git add .")
+	(see difference you've made locally between orginal and edited from when you typed "git add .")
