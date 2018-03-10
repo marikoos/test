@@ -1,5 +1,6 @@
 PLEASE MAKE SURE THE DOWNLOADED PACKAGE.JSON HAS REPLACED YOUR ORIGINAL
 
+GULP
 SET UP
 1)	Install required packages
 		"npm i"
@@ -24,13 +25,29 @@ FUNCTIONALITY
 
 
 GIT
-1) git config --global user.name "Enter your name" 		(To see who did what)
-2) git init
-3) git remote add 485design https://github.com/dalehogg/485-Design
-4) git add .
-5) git commit -m "Enter a useful note"
-6) git push 485design master
-7) git pull		(pull from last repo)
+1) git config --global user.name "Enter your name" 		
+	(To see who did what)
 
-8) git log 		(see log of commit's)
-9) git diff 	(see difference you've made locally between orginal and edited from 						when you typed "git add .")
+2) git init		
+	(Initiate local repository)
+
+3) git remote add 485design https://github.com/dalehogg/485-Design		
+	(Add link, which is in this case named 485design, to the given github repository link)
+
+4) git add .	
+	(Add all contents to the staging area, this is where it will track your local changes until committed)
+
+5) git commit -m "Enter a useful note"		
+	(Committing changes)
+
+6) git push 485design master	
+	(push committed contents to the master directory of the name 485design, which links to the repository link)
+
+7) git pull		
+	(pull changes made from other collaborators)
+
+8) git log 		
+	(see log of commit's)
+	
+9) git diff 	
+	(see difference you've made locally between orginal and edited from 						when you typed "git add .")
